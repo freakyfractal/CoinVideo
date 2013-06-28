@@ -1,0 +1,17 @@
+
+.no-close .ui-dialog-titlebar-close { display: none; }
+.no-titlebar .ui-dialog-titlebar { display: none; }
+
+.info-map { background: transparent; }
+.info-map .ui-dialog-titlebar { display: none; }
+.info-map .ui-widget-content { border: none; }
+
+.info-map-balance {
+	float:right;
+	width: 200px;
+	margin: 40px -12px 0 0;
+	border: 1px solid red;
+	color: green;
+}
+
+.
