@@ -25,8 +25,8 @@ Installation
 *Though they are not strictly necessary you'll need the Google account to deploy your project on App Engine, and you'll want your Virool account to be able to claim your earnings with them.*
 
 
-More Information
------------------
+More Info
+---------
 
 This project was written to run on Google's App Engine platform.
 
@@ -39,9 +39,9 @@ This project was written to run on Google's App Engine platform.
 
 **(Backend)**
 
-* Google's [Datastore](http://google.com) (*NoSQL*) for database
+* [Datastore](http://google.com) (Google) for database
 
-* Google's [User Service](http://google.com) (*OpenID*) for authentication
+* [User Service](http://google.com) (Google) for authentication
 
 * [Virool API](http://virool.com) for videos
 
