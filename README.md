@@ -14,8 +14,8 @@ No-captcha. Users are authenticated.
 Users: Ability to change wallet address keeping their balance.
 Auto-update user's balance.
 
-Install
---------
+Installation
+------------
 *Before installing you will want to have both:*
 
 * Google Account
