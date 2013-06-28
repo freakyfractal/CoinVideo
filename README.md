@@ -25,8 +25,8 @@ Installation
 *Though they are not strictly necessary you'll need the Google account to deploy your project on App Engine, and you'll want your Virool account to be able to claim your earnings with them.*
 
 
-More Details 
-------------------
+More Information
+-----------------
 
 This project was written to run on Google's App Engine platform.
 
