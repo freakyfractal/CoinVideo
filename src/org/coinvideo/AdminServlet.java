@@ -16,24 +16,26 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 public class AdminServlet extends HttpServlet {
+
 	private static final Logger _logger = Logger.getLogger(AdminServlet.class.getName());
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		_logger.info("[ADMIN/PAY] " + req.toString());
+
 		String user_id = req.getParameter("id");
 		if (user_id == null || user_id == "null") user_id = "N/A";
-
 		double r = 0.00000000;
 		String username = "N/A";
 		String email = "N/A";
 		String address = "N/A";
 		String delayed = "0.00000000";
-		//double pending_tmp = 0.00000000;
 		double total_tmp = 0.00000000;
-
+		
+		_logger.info("[ADMIN PAYMENT] " + req.toString());
 		DatastoreService db = DatastoreServiceFactory.getDatastoreService();
 		Key userKey = KeyFactory.createKey("Users", user_id);
+
 		try {
+
 			Entity e = db.get(userKey);
 			username = e.getProperty("username").toString();
 			email = e.getProperty("email").toString();
@@ -41,13 +43,17 @@ public class AdminServlet extends HttpServlet {
 			delayed = e.getProperty("delayed").toString();
 			r = Double.parseDouble(e.getProperty("pending").toString());
 			total_tmp = Double.parseDouble(e.getProperty("total").toString()) + r;
+
 		} catch (EntityNotFoundException e) {
+
 			System.out.println(e.toString());
+
 		}
-		
+
 		Entity e = new Entity("Users", user_id);
 		String pending = "0.00000000";
 		String total = String.format("%.8f", total_tmp);
+
 		e.setProperty("delayed", delayed);
 		e.setProperty("username", username);
 		e.setProperty("email", email);
