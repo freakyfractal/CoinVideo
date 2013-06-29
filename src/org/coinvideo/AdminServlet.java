@@ -65,9 +65,4 @@ public class AdminServlet extends HttpServlet {
 		resp.sendRedirect("/admin/admin.jsp");
 	}
 
-	/*private boolean validSignature(String signature) {
-		if (signature != null) return true;
-		else return false;
-	}*/
-
 }
