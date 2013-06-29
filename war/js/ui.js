@@ -40,11 +40,7 @@ var dialogGettingStarted = function() {
 		title: "Getting Started",
 		width: 450,
 		height: 320,
-<<<<<<< HEAD
 		position: [posX - 500, posY + 105]
-=======
-		position: [posX - 500, posY + 100]
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 	});
 };
 

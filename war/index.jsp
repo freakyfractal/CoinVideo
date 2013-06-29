@@ -75,41 +75,22 @@
 			<div style="position:absolute;top:6px;right:10px;">
 				<div><div id="mainBalance" style="float:left;margin-right:3px;"></div> BTC - <a style="text-decoration:none;" title="Logged in: <%= user %>" href="<%= userService.createLogoutURL(request.getRequestURI()) %>">logout</a>&nbsp;</div>
 			</div>
-<<<<<<< HEAD
-
-=======
-			<div style="position:absolute;bottom:5px;right:10px;">
-				<div><span style="color:red;font-weight:bold;font-style:italic;">NEW!</span> Join our community chat! <a target="_blank" href="chat.jsp">new tab</a></div>
-			</div>
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 	    <%
     }
 	%>
-	<!-- TODO: setAttribute("address") -->
-<<<<<<< HEAD
-	<div id="reloadFrame" style="position:absolute;top:5px;color:rgb(51, 102, 153);cursor:pointer;text-decoration:underline;text-align:right;width:689px;">reload videos</div>
-	<div style="margin:20px 0 0 2px;height:590px;width:687px;">
-=======
-	<div style="margin-left:2px;height:590px;width:687px;">
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
+	<div id="reloadFrame" style="position:absolute;top:5px;color:rgb(51, 102, 153);cursor:pointer;text-decoration:underline;text-align:right;width:690px;">reload videos</div>
+	<div style="margin:50px 0 0 2px;height:590px;width:687px;">
 		<iframe style="background: transparent" allowtransparency="true" id="myFrame"  width="687" height="590" 
-		src="http://api.virool.com/offers/wall/2d384d3bc86bbccb854520986395c2d5?suid=<%= user_id %>" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+		src="http://api.virool.com/offers/wall/c43a48db20a45cb0f978cfb412a54cf4?suid=<%= user_id %>" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
 		<div style="clear: both;"></div>
 	</div>
-<<<<<<< HEAD
 	
-=======
-	<div id="reloadFrame" style="position:absolute;bottom:20px;color:rgb(51, 102, 153);cursor:pointer;text-decoration:underline;text-align:center;">click here to reload</div>
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 	<%
 
   } else {
+  	
 	%>
-<<<<<<< HEAD
 	<p id="google_signin" style="color:#333;">
-=======
-	<p id="google_signin">
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 		<a href="<%= userService.createLoginURL(request.getRequestURI()) %>">Sign in</a>
 		with a Google account to earn bitcoins <em>watching videos!</em>
 		<a href="<%= userService.createLoginURL(request.getRequestURI()) %>">
@@ -119,7 +100,7 @@
 	
 	<div style="padding-top:40px;height:410px;width:728px;">
 		<iframe style="background: transparent" allowtransparency="true" id="myFrame"  width="728" height="410" 
-		src="http://api.virool.com/widgets/2d384d3bc86bbccb854520986395c2d5?suid=N%2FA&autoswitch=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		src="http://api.virool.com/widgets/c43a48db20a45cb0f978cfb412a54cf4?suid=N%2FA&autoswitch=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 		<div style="clear: both;"></div>
 	</div>
 
@@ -133,11 +114,7 @@
 			</blockquote>
 			<blockquote>
 				<strong>Step 2. Get Free Bitcoins.</strong> Just log in to start winning Bitcoins the 
-<<<<<<< HEAD
 				fun, easy way: <em>¡Watching <a target="_blank" href="https://www.virool.com/advertiser?rc=fd7b38f5"><strong>viral</strong> 
-=======
-				fun, easy way: <em>¡Watching <a target="_blank" href="https://www.virool.com/advertiser?rc=af3a7399"><strong>viral</strong> 
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 				videos</a>!</em> …
 			</blockquote>
 			<div style="text-align:right;"><br><div id="moreInfoLink" style="cursor:pointer;float:left;color:grey;"><br>... more</div>&nbsp;&nbsp;&nbsp;<a href="<%= userService.createLoginURL(request.getRequestURI()) %>"><button class="ui-dialog-buttonpane ui-state-focus ui-corner-all" style="width:50%;text-align:center;">Log In NOW!</button></a></div>
@@ -155,15 +132,12 @@
 </div>
 
 
-<<<<<<< HEAD
-<div style="position:absolute;bottom:5px;right:10px;">
-	<div><span style="color:red;font-weight:bold;font-style:italic;">NEW!</span> <em>Join our community CHAT on IRC!</em> <a target="_blank" href="chat.jsp">new tab</a></div>
+<div style="position:absolute;bottom:5px;right:10px;color:#333;">
+	<div><em>Join us on <a target="_blank" href="https://coinvideo.appspot.com/chat.jsp">#CVChat</a> IRC CHAT!</em></div>
 </div>
 <a target="_blank" href="https://github.com/coinpr0n/CoinVideo"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
 
 
-=======
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

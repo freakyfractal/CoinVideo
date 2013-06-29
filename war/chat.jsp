@@ -2,11 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<<<<<<< HEAD
 <title>#CVChat (irc.geekshed.net)</title>
-=======
-<title>CV Chat</title>
->>>>>>> 52d2162cfb7c6390c6dee7b836c9d921c4178949
 <style>
 html {
 	overflow: auto;
