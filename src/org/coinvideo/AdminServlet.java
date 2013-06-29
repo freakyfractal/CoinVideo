@@ -17,16 +17,12 @@ import javax.servlet.http.HttpServletResponse;
 @SuppressWarnings("serial")
 public class AdminServlet extends HttpServlet {
 	private static final Logger _logger = Logger.getLogger(AdminServlet.class.getName());
-	
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    	_logger.info("[ADMIN/PAY] " + req.toString());
-    	String user_id = req.getParameter("id");
-    	if (user_id == null || user_id == "null") user_id = "N/A";
-    	/*double reward;
-    	if (req.getParameter("r") == null) reward = 0.00000000;  
-    	try {
-    		reward = Double.parseDouble(req.getParameter("r")) / 100000000;	
-    	} catch (NumberFormatException e) { reward = 0.00000000; }*/
+
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		_logger.info("[ADMIN/PAY] " + req.toString());
+		String user_id = req.getParameter("id");
+		if (user_id == null || user_id == "null") user_id = "N/A";
+
 		double r = 0.00000000;
 		String username = "N/A";
 		String email = "N/A";
@@ -34,10 +30,10 @@ public class AdminServlet extends HttpServlet {
 		String delayed = "0.00000000";
 		//double pending_tmp = 0.00000000;
 		double total_tmp = 0.00000000;
-		
+
 		DatastoreService db = DatastoreServiceFactory.getDatastoreService();
-        Key userKey = KeyFactory.createKey("Users", user_id);
-        try {
+    Key userKey = KeyFactory.createKey("Users", user_id);
+    try {
 			Entity e = db.get(userKey);
 			username = e.getProperty("username").toString();
 			email = e.getProperty("email").toString();
@@ -45,25 +41,27 @@ public class AdminServlet extends HttpServlet {
 			delayed = e.getProperty("delayed").toString();
 			r = Double.parseDouble(e.getProperty("pending").toString());
 			total_tmp = Double.parseDouble(e.getProperty("total").toString()) + r;
-        } catch (EntityNotFoundException e) {
+    } catch (EntityNotFoundException e) {
 			System.out.println(e.toString());
-        }
-	    Entity e = new Entity("Users", user_id);
-	    String pending = "0.00000000";
-	    String total = String.format("%.8f", total_tmp);
-	    e.setProperty("delayed", delayed);
+    }
+
+    Entity e = new Entity("Users", user_id);
+    String pending = "0.00000000";
+    String total = String.format("%.8f", total_tmp);
+    e.setProperty("delayed", delayed);
 		e.setProperty("username", username);
 		e.setProperty("email", email);
 		e.setProperty("address", address);
 		e.setProperty("pending", pending);
 		e.setProperty("total", total);
 		db.put(e);
+
 		resp.sendRedirect("/admin/admin.jsp");
-    }
-    
-    /*private boolean validSignature(String signature) {
-    	if (signature != null) return true;
-    	else return false;
-    }*/
-    
+	}
+
+	/*private boolean validSignature(String signature) {
+		if (signature != null) return true;
+		else return false;
+	}*/
+
 }
