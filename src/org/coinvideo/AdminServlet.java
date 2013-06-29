@@ -32,8 +32,8 @@ public class AdminServlet extends HttpServlet {
 		double total_tmp = 0.00000000;
 
 		DatastoreService db = DatastoreServiceFactory.getDatastoreService();
-    Key userKey = KeyFactory.createKey("Users", user_id);
-    try {
+		Key userKey = KeyFactory.createKey("Users", user_id);
+		try {
 			Entity e = db.get(userKey);
 			username = e.getProperty("username").toString();
 			email = e.getProperty("email").toString();
@@ -41,14 +41,14 @@ public class AdminServlet extends HttpServlet {
 			delayed = e.getProperty("delayed").toString();
 			r = Double.parseDouble(e.getProperty("pending").toString());
 			total_tmp = Double.parseDouble(e.getProperty("total").toString()) + r;
-    } catch (EntityNotFoundException e) {
+		} catch (EntityNotFoundException e) {
 			System.out.println(e.toString());
-    }
-
-    Entity e = new Entity("Users", user_id);
-    String pending = "0.00000000";
-    String total = String.format("%.8f", total_tmp);
-    e.setProperty("delayed", delayed);
+		}
+		
+		Entity e = new Entity("Users", user_id);
+		String pending = "0.00000000";
+		String total = String.format("%.8f", total_tmp);
+		e.setProperty("delayed", delayed);
 		e.setProperty("username", username);
 		e.setProperty("email", email);
 		e.setProperty("address", address);
