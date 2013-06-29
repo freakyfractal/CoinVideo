@@ -26,17 +26,17 @@ Installation
 
 **(Easy)**
 
-* Set up Eclipse and Google App Engine SDK ([follow guide](https://developers.google.com/appengine/docs/java/tools/eclipse))
+* Set up Eclipse and Google App Engine SDK - [see guide](https://developers.google.com/appengine/docs/java/tools/eclipse)
 
 * Create a new Web Application ( **File** > **New** > **Web Application Project** )
 
 * Import Files ( **File** > **Import...** )
 
-* Choose 'General > File System' and browse to the directory with the CoinVideo files ...
+* Choose `General > File System` and browse to the directory with the CoinVideo files ...
 
 * Import the folders: `src/` and `war/`. If prompted, choose Yes to overwrite `war/WEB-INF/web.xml`.
 
-* You're ready! Now just press **F12** to start up the development server ([localhost:8888](http://localhost:8888))
+* You're ready! Now just press **F12** to start up the development server - [localhost:8888](http://localhost:8888)
 
 **Note:** to deploy on App Engine you will first need a Google account and set up a new application via the console. Then you will need to update `war/WEB-INF/appengine-web.xml` with your application's configuration.
 
