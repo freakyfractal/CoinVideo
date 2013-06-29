@@ -1,0 +1,133 @@
+* { outline: none; }
+body {
+	font:14px/20px 'Helvetica', Arial, sans-serif;
+	min-width:868px;
+	max-width:868px;
+	margin:0;
+	padding:25px 0 0 0;
+	text-align:center;
+}
+iframe {
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+#displayBalance {
+	position:absolute;
+	top:20px;
+	right:10px;
+	font:italic bold 30px/42px Georgia, serif;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.clear{
+	clear:both;
+}
+.wrapper{
+	width:728px;
+	margin:0 auto 10px auto;
+	text-align:left;
+}
+.container{
+	position:relative;
+	border-width:0 !important;
+	border-color:transparent !important;
+	margin:0;
+	text-align:left;
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.1);
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.1);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.1);
+}
+fieldset{
+	padding:10px;
+	background-color:#ddd;
+	border:1px solid #ccc;
+}
+label{
+	float:none;
+	clear:both;
+	display:block;
+	width:auto;
+	margin-top:8px;
+	text-align:left;
+	font-weight:bold;
+	position:relative;
+}
+label .asterisk{
+	position:absolute;
+	top:36px;
+	right:10px;
+	font-size:30px;
+}
+.button,.button-small{
+	display:inline-block;
+	font-family:'Helvetica', Arial, sans-serif;
+	width:auto;
+	white-space:nowrap;
+	height:32px;
+	margin:5px 5px 0 0;
+	padding:0 22px;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	font-style:normal;
+	font-size:15px;
+	line-height:32px;
+	cursor:pointer;
+	border:0;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	vertical-align:top;
+}
+.button-small{
+	float:none;
+	display:inline-block;
+	height:auto;
+	line-height:18px !important;
+	padding:2px 15px !important;
+	font-size:11px !important;
+}
+.button span{
+	display:inline;
+	font-family:'Helvetica', Arial, sans-serif;
+	text-decoration:none;
+	font-weight:bold;
+	font-style:normal;
+	font-size:15px;
+	line-height:32px;
+	cursor:pointer;
+	border:none;
+}
+a:link,a:active,a:visited,a{
+	color:#336699;
+}
+.button:link,.button:active,.button:visited,.button,.button span,.button-small:link,.button-small:active,.button-small:visited,.button-small{
+	background-color:#336699;
+	color:#ffffff;
+}
+.button:hover,.button-small:hover{
+	background-color:#1e5781;
+	color:#ffffff;
+}
+label{
+	line-height:150%;
+	font-family:Helvetica;
+	font-size:14px;
+	color:#333333;
+}
+
+#errorDiv {}
+#errorDiv h1, h3 {}
+#errorDiv h1 { color: red; }
+#errorDiv h3 {}
+#latestRequests {
+	 background: rgba(50,90,50,0.1);
+	 width:600px;
+	 margin:0 auto;
+	 margin-top:40px;
+	 padding-bottom:15px;
+ 	 border: 1px solid #aaa;
+	 border-radius:6px;
+}

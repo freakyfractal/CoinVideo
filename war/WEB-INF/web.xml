@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<servlet>
+	    <servlet-name>Admin</servlet-name>
+	    <servlet-class>org.coinvideo.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Admin</servlet-name>
+	    <url-pattern>/admin/pay</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>Payments</servlet-name>
+	    <servlet-class>org.coinvideo.PaymentsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Payments</servlet-name>
+	    <url-pattern>/withdraw</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>Users</servlet-name>
+	    <servlet-class>org.coinvideo.UsersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Users</servlet-name>
+	    <url-pattern>/users</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>Virool</servlet-name>
+	    <servlet-class>org.coinvideo.ViroolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Virool</servlet-name>
+	    <url-pattern>/virool</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	    <servlet-name>Wallet</servlet-name>
+	    <servlet-class>org.coinvideo.WalletServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Wallet</servlet-name>
+	    <url-pattern>/wallet</url-pattern>
+	</servlet-mapping>
+	
+  <security-constraint>
+	  <web-resource-collection>
+	      <url-pattern>/cron/*</url-pattern>
+	  </web-resource-collection>
+	  <auth-constraint>
+	      <role-name>admin</role-name>
+	  </auth-constraint>
+ 	</security-constraint>
+ 	  <security-constraint>
+	  <web-resource-collection>
+	      <url-pattern>/admin/*</url-pattern>
+	  </web-resource-collection>
+	  <auth-constraint>
+	      <role-name>admin</role-name>
+	  </auth-constraint>
+ 	</security-constraint>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
