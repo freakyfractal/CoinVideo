@@ -8,11 +8,11 @@ AppEngine website where users can earn Bitcoins for watching videos (served with
 
 Main Features
 -------------
-Simple User System to keep track of activity.
-Validate Bitcoin Addresses.
-No-captcha. Users are authenticated.
-Users: Ability to change wallet address keeping their balance.
-Auto-update user's balance.
+* Simple User System to keep track of activity.
+* Validate Bitcoin Addresses.
+* No-captcha. Users are authenticated.
+* Users: Ability to change wallet address keeping their balance.
+* Auto-update user's balance.
 
 Installation
 ------------
@@ -23,6 +23,23 @@ Installation
 * Virool Publisher's Account
 
 *Though they are not strictly necessary you'll need the Google account to deploy your project on App Engine, and you'll want your Virool account to be able to claim your earnings with them.*
+
+**(Easy)**
+
+* Set up Eclipse and Google App Engine SDK ([follow guide](https://developers.google.com/appengine/docs/java/tools/eclipse))
+
+* Create a new Web Application (**File** > **New** > **Web Application Project**)
+
+* Import Files (**File** > **Import...**)
+
+* Choose 'General > File System' and browse to the directory with the CoinVideo files ...
+
+* Import folders `src/` and `war/` (If prompted, choose to overwrite `war/WEB-INF/web.xml`)
+
+* You're ready! Now just press **F12** to start up the development server (default: [localhost:8888](http://localhost:8888))
+
+**Note:** to deploy on App Engine you will first need a Google account and set up a new application via the console. Then you will need to update `war/WEB-INF/appengine-web.xml` with your application's configuration.
+
 
 
 More Info
@@ -39,11 +56,11 @@ This project was written to run on Google's App Engine platform.
 
 **(Backend)**
 
-* [Datastore](http://google.com) (Google) for database
+* [Datastore API](https://developers.google.com/appengine/docs/java/datastore/http://google.com) (Google) for database
 
-* [User Service](http://google.com) (Google) for authentication
+* [Users API](http://google.com) (Google) for authentication
 
-* [Virool API](http://virool.com) for videos
+* [Virool API](http://virool.com) for videos / offerwall
 
 
 **NOTE:** This project is a complete and working website. That said, it's development has most likely
